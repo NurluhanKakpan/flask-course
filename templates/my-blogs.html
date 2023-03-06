@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {% block sub_content %}
+<center>
+  {% if my_blogs%} {% for my_blog in my_blogs %}
+  <h3><a href="/my-blogs/{{my_blog['id']}}">{{my_blog['title']}}</a></h3>
+  <p>{{my_blog['body'] }}</p>
+
+  <hr />
+  {%endfor%} {% else%}
+  <h3>No blogs have been writen yet</h3>
+  {%endif%}
+</center>
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends 'base.html' %} {% block sub_content %}
+<form method="POST">
+  <!-- class named "container" is assigned to div -->
+  <div class="container">
+    <h1>Write Blog</h1>
+
+    <label for="title"><b>Blog Title</b></label>
+    <input
+      type="text"
+      placeholder="Enter title "
+      name="title"
+      id="title"
+      required
+    />
+
+    <label for="body"><b>Your Blog body</b></label>
+    <textarea name="body" id="body" cols="30" rows="10" ></textarea>
+
+    <button type="submit">Submit</button>
+  </div>
+</form>
+<style>
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    margin-left: 650px;
+  }
+  h1,
+  p {
+    text-align: center;
+  }
+  input {
+    margin: 0.25em 0em 1em 0em;
+    outline: none;
+    padding: 0.5em;
+    border: none;
+    background-color: rgb(225, 225, 225);
+    border-radius: 0.25em;
+    color: black;
+  }
+  button {
+    padding: 0.75em;
+    border: none;
+    outline: none;
+    background-color: rgb(68, 18, 232);
+    color: white;
+    border-radius: 0.25em;
+    margin-top: 15px;
+  }
+
+  /* hover functionality for button */
+  button:hover {
+    cursor: pointer;
+    background-color: rgb(41, 4, 164);
+  }
+</style>
+{% endblock %}
